@@ -91,7 +91,7 @@ app.service("service", ["$http", function ($http) {
 
     this.save_rap = function (obj, callback) {
         $http({
-            url: URL_API + "rap/",
+            url: URL_API + "rap",
             method: "POST",
             data: obj,
             headers: {
@@ -135,7 +135,7 @@ app.service("service", ["$http", function ($http) {
 
     this.get_anggaran_tahun = function (callback) {
         $http({
-            url: URL_API + "anggaran-tahun/",
+            url: URL_API + "anggaran-tahun",
             method: "GET",
             headers: {
                 'Authorization': 'Bearer ' + accessToken // Attach the access token as a Bearer token
