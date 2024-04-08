@@ -18,7 +18,7 @@ app.service("service", ["$http", function($http) {
     }
     this.save_data = function(obj,callback) {
         $http({
-            url: URL_API + "kelompok-belanja/",
+            url: URL_API + "kelompok-belanja",
             method: "POST",
             data: obj,
             headers: {

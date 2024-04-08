@@ -106,7 +106,7 @@ Route::prefix("v1")->group(function () {
         // Kelompok Belanja
         route::middleware('auth:api')->prefix("kelompok-belanja")->group(function () {
             route::get("/", [KelompokBelanja::class, "get_all"]);
-            route::post("/", [KelompokBelanja::class, "save_data"]);
+            route::post("", [KelompokBelanja::class, "save_data"]);
             route::put("/{id}", [KelompokBelanja::class, "update_data"]);
             route::delete("/{id}", [KelompokBelanja::class, "delete_data"]);
         });
