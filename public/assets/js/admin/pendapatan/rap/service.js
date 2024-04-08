@@ -47,7 +47,7 @@ app.service("service", ["$http", function ($http) {
     }
     this.save_data = function (obj, callback) {
         $http({
-            url: URL_API + "detail-rap/",
+            url: URL_API + "detail-rap",
             method: "POST",
             data: obj,
             headers: {

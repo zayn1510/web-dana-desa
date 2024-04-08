@@ -94,7 +94,7 @@ app.service("service", ["$http", function ($http) {
 
     this.save_data = function (obj, callback) {
         $http({
-            url: URL_API + "rab/",
+            url: URL_API + "rab",
             method: "POST",
             data: obj,
             headers: {
@@ -181,7 +181,7 @@ app.service("service", ["$http", function ($http) {
 
     this.save_rab_rinci = function (obj, callback) {
         $http({
-            url: URL_API + "detail-rab/",
+            url: URL_API + "detail-rab",
             method: "POST",
             data: obj,
             headers: {

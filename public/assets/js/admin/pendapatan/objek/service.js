@@ -51,7 +51,7 @@ app.service("service", ["$http", function($http) {
 
     this.save_data = function(obj,callback) {
         $http({
-            url: URL_API + "objek-pendapatan/",
+            url: URL_API + "objek-pendapatan",
             method: "POST",
             data: obj,
             headers: {

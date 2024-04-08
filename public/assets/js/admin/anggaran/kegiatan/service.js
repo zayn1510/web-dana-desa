@@ -139,7 +139,7 @@ app.service("service", ["$http", function ($http) {
 
     this.save_data = function (obj, callback) {
         $http({
-            url: URL_API + "anggaran-kegiatan/",
+            url: URL_API + "anggaran-kegiatan",
             method: "POST",
             data: obj,
             headers: {
@@ -201,7 +201,7 @@ app.service("service", ["$http", function ($http) {
 
     this.save_detail_rak = function (obj, callback) {
         $http({
-            url: URL_API + "detail-kegiatan/",
+            url: URL_API + "detail-kegiatan",
             method: "POST",
             data: obj,
             headers: {
