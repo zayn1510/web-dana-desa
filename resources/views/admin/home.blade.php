@@ -133,7 +133,7 @@
     </div>
 @endsection
 @section('javascript')
-    <script src="{{ asset('grafik/chart.min.js') }}"></script>
+    <script src="{{ asset('grafik/Chart.min.js') }}"></script>
     <script src="{{ asset('assets/angularjs/angular.min.js') }}"></script>
     <script src="{{ asset('assets/angularjs/angular-route.min.js') }}"></script>
     <script src="{{ asset('assets/js/admin/dashboard/app.js') }}"></script>

@@ -71,9 +71,8 @@
                                             <div class="alert alert-info poppins">@{{ ket }}</div>
                                         </div>
                                         <div class="col-2">
-                                            <button class="btn btn-primary poppins"
-                                                 ng-click="tambahData()" style="width: 100%;"><i
-                                                    class="ti-plus"></i> Paket</button>
+                                            <button class="btn btn-primary poppins" ng-click="tambahData()"
+                                                style="width: 100%;"><i class="ti-plus"></i> Paket</button>
                                         </div>
                                         <div class="col-2">
                                             <button class="btn btn-danger poppins" ng-click="batal()"
@@ -111,6 +110,12 @@
                                                 <td>Pagu</td>
                                                 <td>
                                                     <p>@{{ formatRupiah(pagu) }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Volume</td>
+                                                <td>
+                                                    <p>@{{ volume }}</p>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -152,7 +157,7 @@
                                         <tfoot>
                                             <tr>
                                                 <td colspan="5">Total</td>
-                                                <td class="text-center">@{{formatRupiah(totalnilai)}}</td>
+                                                <td class="text-center">@{{ formatRupiah(totalnilai) }}</td>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -181,7 +186,7 @@
                             <tr>
                                 <td>Sisa Pagu</td>
                                 <td>:</td>
-                                <td>@{{formatRupiah(sisapagu)}}</td>
+                                <td>@{{ formatRupiah(sisapagu) }}</td>
                             </tr>
                         </table>
                         <div class="form-item">
@@ -220,13 +225,13 @@
                             <p class="poppins"><small style="color: red"> * </small> Wajib Di Isi</p>
                         </div>
                         <div class="form-item">
-                            <input type="text" class="forms-label" id="" />
+                            <input type="text" class="forms-label" id="satuan" />
                             <label>Satuan</label>
                             <p class="poppins"><small style="color: red"> * </small> Wajib Di Isi</p>
                         </div>
                         <div class="form-item">
                             <input type="text" class="forms-label" />
-                            <label>Target</label>
+                            <label>Target Keluaran</label>
                             <p class="poppins"><small style="color: red"> * </small> Wajib Di Isi</p>
                         </div>
 
