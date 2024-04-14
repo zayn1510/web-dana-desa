@@ -14,7 +14,8 @@ app.controller("homeController", function ($scope, service) {
     var data_perangkat_desa = [];
     var pagu_detail = 0;
     fun.totalnilai = 0;
-
+    var jumlah = 0;
+    var s = "";
 
 
     fun.get_pola_kegiatan = () => {
@@ -135,7 +136,6 @@ app.controller("homeController", function ($scope, service) {
     }
 
     fun.tambahData = () => {
-        fun.clear_input();
 
         fun.aksi = false;
         if (fun.totalnilai == fun.pagu || fun.totalnilai > fun.pagu) {
@@ -279,11 +279,19 @@ app.controller("homeController", function ($scope, service) {
         fun.pagu = (pagu);
         pagu_detail = pagu;
         fun.detail_data_anggaran(id);
+        fun.volume = volume;
+        const str = volume.split(" ");
+        s = str[1];
+        fun.clear_input();
+        const satuanelement = document.getElementById("satuan");
+        satuanelement.setAttribute("disabled", true);
+        satuanelement.value = s;
     }
 
     fun.editanggaran = (row) => {
         fun.id_detail = row.id;
         fun.aksi = true;
+
         const formedit = fun.formdata;
         for (var i = 0; i < formedit.length; i++) {
             const label = formedit[i].label;
@@ -313,8 +321,7 @@ app.controller("homeController", function ($scope, service) {
         });
         if (check) {
             payloads["id_anggaran_kegiatan"] = fun.id_anggaran_kegiatan;
-            let str = payloads["satuan"].split(" ");
-            payloads["nilai"] = parseInt(fun.nilai) * str[0];
+            payloads["nilai"] = parseInt(fun.nilai) * parseInt(payloads["target"]);
         }
 
         if (payloads["nilai"] > fun.sisapagu) {

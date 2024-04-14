@@ -46,6 +46,8 @@ class RapRepo
     public function save(RapRequest $req): JsonResponse
     {
         try {
+
+
             RapModel::query()->create($req->validated());
             return response()->json(
                 [
@@ -55,7 +57,7 @@ class RapRepo
             );
         } catch (\Throwable $th) {
             return response()->json([
-                "message" => "Error",
+                "message" => "Error ".$th->getMessage(),
                 "success" => false,
             ]);
         }

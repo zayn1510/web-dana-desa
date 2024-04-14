@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SISTEM INFORMASI AKADEMIK TK</title>
+    <title>{{ $data->title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="{{ asset('uploads/' . $data->logo_rel) }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -498,7 +498,7 @@
         var URL_API = "<?php echo getenv('URL_API'); ?>";
         var URL_FILE = "<?php echo getenv('URL_FILE'); ?>";
         var URL_APP = "<?php echo getenv('URL_APP'); ?>";
-        localStorage.setItem("TOKEN_API",  {!! json_encode(session('token')) !!});
+        localStorage.setItem("TOKEN_API", {!! json_encode(session('token')) !!});
     </script>
 
     @yield('javascript')
