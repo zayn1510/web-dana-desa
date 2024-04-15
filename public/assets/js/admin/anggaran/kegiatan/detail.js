@@ -129,7 +129,9 @@ app.controller("homeController", function ($scope, service) {
 
     fun.clear_input = () => {
         $(".forms-label").each((index, element) => {
-            $(element).val("");
+            if ($(element).attr("id") !== "satuan") {
+                $(element).val("");
+            }
         });
         fun.get_form();
         fun.read_data_json();
