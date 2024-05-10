@@ -36,9 +36,9 @@ class PenggunaSeeder extends Seeder
 
         DB::table('users')->insert([
         	'id_pengguna' => 0,
-            'email'=>"kopralgamers1510@gmail.com",
-            "role"=>"admin",
-        	'username' => "admin",
+            'email'=>"admin3@gmail.com",
+            "role"=>1,
+        	'username' => "zayn",
             "name"=>"admin",
         	'password' => Hash::make("12345678"),
         	'remember_token' => Str::password(40),
