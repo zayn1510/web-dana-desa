@@ -13,8 +13,11 @@ app.controller("homeController", function ($scope, service) {
     var urlfotorel = null;
     var id=0;
     var id_user=0;
+    var elementIdPengguna=document.getElementById("id_pengguna");
     fun.get_all = () => {
-        service.get_all(res => {
+        const id_pengguna=elementIdPengguna.value;
+        service.get_all(id_pengguna,res => {
+          
             const { user, pengaturan } = res.data;
             $("#username").val(user.username);
             $("#katasandi").val(user.password);

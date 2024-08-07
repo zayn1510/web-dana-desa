@@ -1,9 +1,9 @@
 app.service("service", ["$http", function($http) {
 
     const accessToken=localStorage.getItem("TOKEN_API");
-    this.get_all = function(callback) {
+    this.get_all = function(id,callback) {
         $http({
-            url: URL_API+"setting",
+            url: URL_API+"setting/"+id,
             method: "GET",
             headers: {
                 'Authorization': 'Bearer ' + accessToken // Attach the access token as a Bearer token

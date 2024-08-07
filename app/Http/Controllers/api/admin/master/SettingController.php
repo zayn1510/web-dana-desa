@@ -16,9 +16,9 @@ class SettingController extends Controller
         $this->repo=$rep;
     }
 
-    public function get_all():JsonResponse
+    public function get_all($id):JsonResponse
     {
-        return $this->repo->getData();
+        return $this->repo->getData($id);
     }
 
     public function update_data(Request $request):JsonResponse

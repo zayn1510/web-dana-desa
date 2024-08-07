@@ -44,6 +44,8 @@ class PageController extends Controller
 
         $datalogin->name = Auth::user()->name;
         $datalogin->foto = $perangkat["foto"];
+        $perangkatdesa=DB::table("perangkat_desa")->whereRaw("id=?",$datalogin->id_pengguna)->first();
+        $datalogin->id_jabatan=$perangkatdesa->id_jabatan;
         return [$data, $datalogin];
     }
 

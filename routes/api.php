@@ -192,7 +192,7 @@ Route::prefix("v1")->group(function () {
 
         // Detail Rencana Anggaran Pendapatan
         route::middleware('auth:api')->prefix("setting")->group(function () {
-            route::get("/", [SettingController::class, "get_all"]);
+            route::get("/{id}", [SettingController::class, "get_all"]);
             route::post("/", [SettingController::class, "update_data"]);
         });
 

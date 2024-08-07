@@ -64,4 +64,9 @@
 .kotak-ttd{
     border: 1px solid;
     width: 50%;
+    padding: 10px;
+}
+
+.kotak-ttd img{
+    width: 100px;
 }

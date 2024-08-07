@@ -19,11 +19,11 @@ class PengaturanRepo
      * Summary of getData
      * @return \Illuminate\Http\JsonResponse|mixed
      */
-    public function getData()
+    public function getData($id)
     {
         try {
             // load data jabatan desa
-            $data["user"] = DB::table("users")->whereRaw("role=?", ["admin"])->selectRaw("*")->first();
+            $data["user"] = DB::table("users")->whereRaw("id_pengguna=?", [$id])->selectRaw("*")->first();
             $data["pengaturan"] = DB::table("pengaturan")->selectRaw("*")->first();
             return response()->json(["message" => "success", "success" => true, "data" => $data], 200);
 
