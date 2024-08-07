@@ -36,11 +36,14 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
+ Route::get("welcome",function(){
+    echo "welcome";
+ });
+
 Route::prefix("v1")->group(function () {
 
     Route::prefix("admin")->group(function () {
         route::post("login", [LoginControllerAdmin::class, "login"]);
-
         // perangkat desa
         route::middleware("auth:api")->prefix("perangkat-desa")->group(function () {
             route::get("/", [perangkatController::class, "get_data"]);

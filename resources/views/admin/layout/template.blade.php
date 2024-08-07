@@ -85,8 +85,10 @@
                                         class="ti-dashboard"></i><span>dashboard</span></a>
                             </li>
                             {{--  --}}
-
-                            @if ($datalogin->id_jabatan==0)
+                            <?php 
+                        
+                            ?>
+                            @if ($datalogin->id_jabatan !=1)
                                                         {{-- // Navigation Data Master --}}
                                                         <li>
                                                             <a href="#" aria-expanded="true"><i class="ti-package"></i><span> Data Master 
