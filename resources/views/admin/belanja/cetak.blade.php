@@ -136,7 +136,7 @@
             <div class="kotak-ttd">
                 <p>Setujui Oleh</p>
                 <p><b>Kepala Desa</b></p>
-                <img src="{{asset("ttd.png")}}" class="ttd"/>
+                <p>....................</p>
                 <p><b>{{ $data->perangkat['nama_kepala_desa'] }}</b></p>
             </div>
         </div>
