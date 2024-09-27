@@ -136,7 +136,7 @@
             <div class="kotak-ttd">
                 <p>Setujui Oleh</p>
                 <p><b>Kepala Desa</b></p>
-                <p>....................</p>
+                <p class="space"></p>
                 <p><b>{{ $data->perangkat['nama_kepala_desa'] }}</b></p>
             </div>
         </div>
@@ -144,7 +144,7 @@
             <div class="kotak-ttd">
                 <p>Setujui Oleh</p>
                 <p><b>Sekretaris Desa</b></p>
-                <p>....................</p>
+                <p class="space"></p>
                 <p><b>{{ $data->perangkat['nama_sekretaris_desa'] }}</b></p>
             </div>
 
