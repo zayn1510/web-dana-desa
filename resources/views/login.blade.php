@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Login Akun</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('uploads/'.$data["pengaturan"]->logo_login) }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('uploads/' . $data['pengaturan']->logo_login) }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
@@ -40,10 +40,31 @@
     <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
 <style>
-    .login-form-head{
+    .login-form-head {
         background-color: white;
     }
+
+    .form-gp label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #b3b2b2;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+
+        padding: 10px;
+    }
+
+    .form-gp input {
+        width: 100%;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 10px;
+        margin-top: 10px;
+    }
 </style>
+
 <body ng-controller="homeController">
     <div class="login-area">
         <div class="container">
@@ -51,46 +72,49 @@
                 <form ng-submit="loginAkun()" method="POST">
                     @csrf
                     <div class="login-form-head">
-                        <img src="{{ asset('uploads/'.$data["pengaturan"]->logo_login) }}" class="img-responsive" style="width: 150px;height:150px;">
+                        <img src="{{ asset('uploads/' . $data['pengaturan']->logo_login) }}" class="img-responsive"
+                            style="width: 150px;height:150px;">
                     </div>
                     <div class="login-form-body" style="margin-top: -50px;">
-                        <h4 class="text-center" style="margin-bottom: 20px;">{{$data["message"]}}</h4>
+                        <h4 class="text-center" style="margin-bottom: 20px;">{{ $data['message'] }}</h4>
 
-                            <div class="form-gp">
+                        <div class="form-gp">
 
-                                <label for="username">Username</label>
-                                <input type="username" name="username" id="username" class="form-login" ng-model="username" oninput="changeBorder(event,1)">
-                                <i class="ti-user"></i>
-                                <div class="text-danger errormessage"></div>
-                            </div>
-                            <div class="form-gp">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password" ng-model="password" class="form-login" oninput="changeBorder(event,2)">
-                                <i class="ti-lock"></i>
-                                <div class="text-danger errormessage"></div>
-                            </div>
-                            <div class="row mb-4 rmber-area">
-                                <div class="col-6">
-                                    <div class="custom-control custom-checkbox mr-sm-2">
-                                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                                        <label class="custom-control-label" for="customControlAutosizing">Remember
-                                            Me</label>
-                                    </div>
-                                </div>
-                                <div class="col-6 text-right">
-                                    <a href="#">Forgot Password?</a>
+                            <label for="username">Username</label>
+                            <input type="username" name="username" id="username" class="form-login" ng-model="username"
+                                oninput="changeBorder(event,1)">
+                            <i class="ti-user"></i>
+                            <div class="text-danger errormessage"></div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" ng-model="password" class="form-login"
+                                oninput="changeBorder(event,2)">
+                            <i class="ti-lock"></i>
+                            <div class="text-danger errormessage"></div>
+                        </div>
+                        <div class="row mb-4 rmber-area">
+                            <div class="col-6">
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <label class="custom-control-label" for="customControlAutosizing">Remember
+                                        Me</label>
                                 </div>
                             </div>
-                            <div class="submit-btn-area">
-                                <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
+                            <div class="col-6 text-right">
+                                <a href="#">Forgot Password?</a>
                             </div>
+                        </div>
+                        <div class="submit-btn-area">
+                            <button id="form_submit" type="submit"> Login <i class="ti-arrow-right"></i></button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script>
-          var URL_API="<?php echo getenv("URL_API");?>";
+        var URL_API = "<?php echo getenv('URL_API'); ?>";
     </script>
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
