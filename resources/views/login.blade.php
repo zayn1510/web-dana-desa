@@ -63,6 +63,10 @@
         padding: 10px;
         margin-top: 10px;
     }
+
+    .toggle-password {
+        margin-top: 10px;
+    }
 </style>
 
 <body ng-controller="homeController">
@@ -90,7 +94,7 @@
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" ng-model="password" class="form-login"
                                 oninput="changeBorder(event,2)">
-                            <i class="ti-lock"></i>
+                            <i class="fa fa-fw fa-eye toggle-password"></i>
                             <div class="text-danger errormessage"></div>
                         </div>
                         <div class="row mb-4 rmber-area">
